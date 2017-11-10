@@ -9,18 +9,20 @@ class CountryHelper
 
 
     /**
-     * browser lang (supposedly iso639-1) => country ISO 3166-1 alpha2
-     *
-     * To know where a language was spoken, I used this correspondence:
-     * https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory
-     * and here to choose which country in case of conflict:
-     * http://www.internetworldstats.com/languages.htm
-     * and this one too (actually better):
-     * https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes (clicking the ISO language name link
-     * and taking the official language country)
+     * An array of
+     *      browser lang (supposedly iso639-1) => country ISO 3166-1 alpha2
      *
      *
-     * Note: my algorithm is totally arbitrary (bad).
+     * To know where a language was spoken, I used mainly this page:
+     * https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     *
+     *
+     * Note: when a language was spoken in many countries, like arabic for instance,
+     * I chose arbitrary (bad).
+     * For instance, for arabic I chose Algeria.
+     * So, be aware that this implementation is just a fallback solution to a better algorithm.
+     * However, I believe in most cases this array return relevant results, despite of
+     * what I just said.
      *
      *
      */
@@ -29,14 +31,7 @@ class CountryHelper
         'ab' => 'RU',
         'ae' => 'IR',
         'af' => 'ZA',
-
-        /**
-         * akan is spoken in:
-         * - ghana
-         * - ivory coast
-         */
-//        'ak' => 'GH',
-        'ak' => 'CI',
+        'ak' => 'GH',
         'am' => 'ET',
         'an' => 'ES',
         'ar' => 'DZ',

@@ -96,13 +96,13 @@ class Http4AllHeader
         // http://php.net/manual/en/intl.requirements.php
         if (true === $options['useIntl']) {
             if (extension_loaded("intl")) {
-                $locale = \Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
-                $locale = \Locale::getRegion($locale);
-                return $locale;
+                if (array_key_exists("HTTP_ACCEPT_LANGUAGE", $_SERVER)) {
+                    $locale = \Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+                    $locale = \Locale::getRegion($locale);
+                    return $locale;
+                }
             }
         }
-
-
 
 
         $lang = Http4AllHeader::getHttpHeader("Accept-Language");

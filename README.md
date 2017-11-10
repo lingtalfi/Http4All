@@ -59,6 +59,10 @@ a(Http4AllHeader::getUserPreferredCountry()); // US,
 History Log
 ------------------
     
+- 1.1.1 -- 2017-11-10
+
+    - fix Http4AllHeader::getUserPreferredCountry check on HTTP_ACCEPT_LANGUAGE
+    
 - 1.1.0 -- 2017-10-28
 
     - add Http4AllHeader
