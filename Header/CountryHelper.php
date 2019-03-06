@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Http4All\Header;
+namespace Ling\Http4All\Header;
 
 
 class CountryHelper
