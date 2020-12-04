@@ -58,7 +58,11 @@ a(Http4AllHeader::getUserPreferredCountry()); // US,
 
 History Log
 ------------------
-    
+
+- 1.1.2 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.1.1 -- 2017-11-10
 
     - fix Http4AllHeader::getUserPreferredCountry check on HTTP_ACCEPT_LANGUAGE
